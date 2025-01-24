@@ -10,7 +10,7 @@ const initialState = tasksTimeAdapter.getInitialState({
 
 export const fetchTasksTime = createAsyncThunk("taskstime/fetchTasksTime", async () => {
     try {
-        const response = await axios.get("http://localhost:9000/taskstime");
+        const response = await axios.get("https://planer-json-server.glitch.me/taskstime");
         return response.data;
     } catch {
         console.log(err);
@@ -19,17 +19,17 @@ export const fetchTasksTime = createAsyncThunk("taskstime/fetchTasksTime", async
 );
 
 export const addTaskTime = createAsyncThunk("taskstime/addTaskTime", async () => {
-    const response = await axios.post("http://localhost:9000/taskstime");
+    const response = await axios.post("https://planer-json-server.glitch.me/taskstime");
     return response.data;
 });
 
 export const updateTaskTime = createAsyncThunk("taskstime/updateTaskTime", async (taskTime) => {
-    const response = await axios.put(`http://localhost:9000/taskstime/${taskTime.id}`, taskTime);
+    const response = await axios.put(`https://planer-json-server.glitch.me/taskstime/${taskTime.id}`, taskTime);
     return response.data;
 });
 
 export const deleteTaskTime = createAsyncThunk("taskstime/deleteTaskTime", async () => {
-    const response = await axios.delete("http://localhost:9000/taskstime");
+    const response = await axios.delete("https://planer-json-server.glitch.me/taskstime");
     return response.data;
 });
 

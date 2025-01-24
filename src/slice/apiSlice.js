@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
     reducerPath: "api",
     tagTypes: ["TASK", "TIME", "MAIL"],
-    baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9000/" }),
+    baseQuery: fetchBaseQuery({ baseUrl: "https://planer-json-server.glitch.me/" }),
     endpoints: (builder) => ({
         getTasks: builder.query({
             query: () => "tasks",
@@ -99,3 +99,5 @@ export const {
     useUpdateMailMutation
 }
     = apiSlice;
+
+    //http://localhost:9000/

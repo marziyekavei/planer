@@ -13,7 +13,7 @@ const initialState = mailsAdapter.getInitialState({
 export const fetchMails = createAsyncThunk(
     "mails/fetchMails", async () => {
         try {
-            const response = await axios.get("http://localhost:9000/mails");
+            const response = await axios.get("https://planer-json-server.glitch.me/mails");
             return response.data;
         } catch (error) {
             console.log(error)
@@ -24,7 +24,7 @@ export const fetchMails = createAsyncThunk(
 export const editMail = createAsyncThunk("mails/editMail", async (mail) => {
     console.log(mail);
     console.log(mail.id);
-    const response = await axios.put(`http://localhost:9000/mails/${mail.id}`, mail);
+    const response = await axios.put(`https://planer-json-server.glitch.me/mails/${mail.id}`, mail);
     return response.data;
 })
 
