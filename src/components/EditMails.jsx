@@ -52,10 +52,10 @@ const EditMails = () => {
             </Divider>
             <Grid container spacing={2} sx={{ marginTop: "20px" }}>
                 <Grid>
-                    <TextField color='secondary' label="وعده غذایی" value={title || ""} onChange={onTitleChange}></TextField>
+                    <TextField color='primary' label="وعده غذایی" value={title || ""} onChange={onTitleChange}></TextField>
                 </Grid>
                 <Grid>
-                    <TextField color='secondary' label="وضعیت" value={status || ""} onChange={onStatusChange}></TextField>
+                    <TextField color='primary' label="وضعیت" value={status || ""} onChange={onStatusChange}></TextField>
                 </Grid>
                 <Grid>
                     <Button sx={{ backgroundColor: blue[600] }} variant='contained' onClick={handleEdit}> ویرایش </Button>
